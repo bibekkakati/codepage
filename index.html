@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="description"  content="About Palindrome program, Fibonacci Sequence, Factorial number, Bubble sort, Finding nth largest number in Array in C programming and Java">
+	<meta name="keywords" content="Palindrome program, Fibonacci Sequence, Factorial number, Bubble sort, number in array, c programming, java">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="CSS/main.css">
+
+	<title>C programming/JAVA-Q&amp;A</title>
+
+</head>
+
+<body>
+
+<!-- ********************************** container *************************************** -->
+
+<div class="container-fluid">
+	
+<!--	********************** first question ****************************  -->
+	
+	<div class="firstQ">
+    
+	    <div class="row">
+        
+         <div class="col-md-12 Question effect2"><h1>What is Palindrome program ?</h1></div> <!-- Question -->
+         
+         <div class="col-md-12 Answer"><h3>A palindrome number is a number that is same after reverse. For example 121, 34543, 48984 are the palindrome numbers.</h3><hr>
+         <h3><strong>Palindrome number algorithm :</strong></h3>
+             
+                 <ul>
+                     <li>Get the number from user</li>
+                     <li>Hold the number in temporary variable</li>
+                     <li>Reverse the number</li>
+                     <li>Compare the temporary number with reversed number</li>
+                     <li>If both numbers are same, print palindrome number</li>
+                     <li>Else print not palindrome number</li>
+                 </ul>   
+             
+         </div>  <!-- Description -->
+
+         <div class="col-md-12 text-center"><button type="button" class="btn btn-success" role="button" data-toggle="collapse" href=".c1" aria-expanded="false" aria-controls="collapseExample">Code In C</button> &nbsp;&nbsp;&nbsp; 
+            <button type="button" class="btn btn-warning" role="button" data-toggle="collapse" href=".j1" aria-expanded="false" aria-controls="collapseExample">Code In JAVA</button></div>
+            <div class="row codebox">
+         <div class="col-md-6 codeinC c1 code effect7">
+            
+             <h3><strong>Palindrome program in C :</strong></h3><br>
+             <p>
+
+                    <em style="color: darkred">#include&lt;stdio.h&gt;</em>
+                    <br>
+                    <b>int</b> &nbsp; main()<br> 
+                    {    
+                    <b>int</b> &nbsp; n, r, sum = 0, temp;    
+                    <br>
+                    <b>printf</b> &nbsp; ("enter the number = ");<br>
+                    <b>scanf</b> &nbsp; ("%d",&amp;n); 
+                    <br>
+                    temp = n;<br> 
+                    <b>while</b> &nbsp; (n>0)<br>  
+                    {    
+                    r = n%10; <br>  
+                    sum = (sum*10) + r; <br>   
+                    n = n/10;
+                    }    <br>
+                    <b>if</b> &nbsp; (temp==sum)    <br>
+                    <b>printf</b> &nbsp; ("palindrome number ");    <br>
+                    <b>else</b>  <br>
+                    <b>printf</b>&nbsp; ("not palindrome");   <br>
+                    <b>return</b>&nbsp;  0;  
+                    } 
+ 
+             </p>
+
+             
+         </div>  <!-- code in C -->
+         
+         <div class="col-md-6 codeinJava j1 code effect7">
+
+            <h3><strong>Palindrome program in JAVA :</strong></h3><br>
+             <p>
+                <b>class</b>&nbsp;  PalindromeExample{  <br>
+                <b>public static void</b> &nbsp; main(String args[]){  <br>
+                <b>int</b> &nbsp; r, sum = 0, temp;  <br>  
+                    <b>int</b> &nbsp; n = 454; &nbsp;<span>//It is the number variable to be checked for palindrome</span>  <br>
+                     temp = n;  <br>  
+                    <b> while</b> &nbsp; (n>0){    <br>
+                      r = n%10;  <span>//getting remainder</span>  <br>
+                      sum = (sum * 10) + r;  <br>  
+                      n= n/10;    <br>
+                     }    <br>
+                    <b>if</b> &nbsp; (temp==sum)  <br>  
+                <b>System.out.println</b> &nbsp; ("palindrome number ");   <br> 
+                <b>else</b>    <br>
+                <b>System.out.println</b> &nbsp;("not palindrome");  <br>  
+                   }
+                   }  
+             </p>
+
+         </div>  <!-- code in Java -->
+         </div>
+        </div>
+    </div>
+    
+
+    <!--  ************************************* second question **************************** -->
+
+    <div class="secondQ">
+    
+            <div class="row">
+            
+             <div class="col-md-12 Question effect2"><h1>What is Fibonacci Series ?</h1></div> <!-- Question -->
+             
+             <div class="col-md-12 Answer"><h3>In case of fibonacci series, next number is the sum of previous two numbers for example 0, 1, 1, 2, 3, 5, 8, 13, 21 etc. The first two numbers of fibonacci series are 0 and 1.</h3> 
+                 
+             </div>  <!-- Description -->
+
+             <div class="col-md-12 text-center"><button type="button" class="btn btn-success" role="button" data-toggle="collapse" href=".c2" aria-expanded="false" aria-controls="collapseExample">Code In C</button> &nbsp;&nbsp; 
+                <button type="button" class="btn btn-warning" role="button" data-toggle="collapse" href=".j2" aria-expanded="false" aria-controls="collapseExample">Code In JAVA</button></div>
+            <div class="row codebox">
+             <div class="col-md-6 codeinC c2 effect7">
+                
+                 <h3><strong>Fibonacci Series in C :</strong></h3><br>
+                 <p>
+    
+                        <em style="color: darkred">#include&lt;stdio.h&gt;</em>    <br>
+                                <b>int</b> main()    <br>
+                                {    <br>
+                                <b>int</b> n1 = 0, n2 = 1, n3, i, number;   <br> 
+                                <b>printf</b>("Enter the number of elements:");  <br>  
+                                <b>scanf</b>("%d", &amp;number);    <br>
+                                <b>printf</b>("\n%d %d", n1, n2); &nbsp;<span>//printing 0 and 1 </span>   <br>
+                                <b>for</b>(i=2; i&lt;number; ++i) &nbsp; <span>//loop starts from 2 because 0 and 1 are already printed</span>    <br></number>
+                                {    <br>
+                                  n3=n1+n2;    <br>
+                                <b>printf</b>(" %d",n3);    <br>
+                                  n1 = n2;    <br>
+                                  n2 = n3;    <br>
+                                }  <br>
+                                <b>return</b> 0;  <br>
+                                }
+                                
+                                <hr>
+
+                                <p style="color: darkred;">Output:</p>
+                                    <p>Enter the number of elements: 15<br>
+                                    0 1 1 2 3 5 8 13 21 34 55 89 144 233 377 </p>
+     
+                 </p>
+    
+                 
+             </div>  <!-- code in C -->
+             
+             <div class="col-md-6 codeinJava j2 effect7">
+    
+                <h3><strong>Fibonacci Series in JAVA :</strong></h3><br>
+                 <p>
+                        <b>class</b> FibonacciExample{  <br>
+                        <b>public static void</b> main(String args[])  <br>
+                            {    <br>
+                            <b>int</b> n1 = 0, n2 = 1, n3, i, count = 10;  <br>  <br>
+                        <b> System.out.print</b>(n1 + " " + n2); <span>//printing 0 and 1  </span><br><br>
+                                
+                    <b>for</b>(i=2; i&lt;count; ++i) <span>//loop starts from 2 because 0 and 1 are already printed  </span><br>
+                             {    <br>
+                              n3 = n1 + n2;    <br><br>
+                            <b>System.out.print</b>(" " + n3);    <br>
+                              n1 = n2;    <br>
+                              n2 = n3;    <br>
+                             }   <br> 
+                              
+                            }<br>
+                        }   
+                            <hr>
+
+                                <p style="color: darkred;">Output:</p>
+                                    <p>0 1 1 2 3 5 8 13 21 34</p>
+                 </p>
+    
+             </div>  <!-- code in Java -->
+            </div>
+             
+        </div>
+        
+    </div>
+
+
+        <!--  *********************************** third question *****************************  -->
+
+    <div class="thirdQ">
+    
+                <div class="row">
+                
+                 <div class="col-md-12 Question effect2"><h1>What is Factorial program ?</h1></div> <!-- Question -->
+                 
+                 <div class="col-md-12 Answer"><h3>Factorial of n is the product of all positive descending integers. Factorial of n is denoted by n!. For example: 3! = 3*2*1 = 6 <br> Here, 5! is pronounced as "5 factorial", it is also called "5 bang" or "5 shriek".
+
+                    The factorial is normally used in Combinations and Permutations (mathematics). </h3>
+                     
+                 </div>  <!-- Description -->
+
+                 <div class="col-md-12 text-center"><button type="button" class="btn btn-success" role="button" data-toggle="collapse" href=".c3" aria-expanded="false" aria-controls="collapseExample">Code In C</button> &nbsp;&nbsp; 
+                    <button type="button" class="btn btn-warning" role="button" data-toggle="collapse" href=".j3" aria-expanded="false" aria-controls="collapseExample">Code In JAVA</button></div>
+                 
+                    <div class="row codebox">
+                 <div class="col-md-6 codeinC c3 effect7">
+                    
+                     <h3><strong>Factorial program in C :</strong></h3><br>
+                     <p>
+        
+                            <em style="color: darkred">#include&lt;stdio.h&gt;</em>
+                            <br>
+                            <b>int</b> &nbsp; main() 
+                            {    <br>
+                            <b>int</b> i, fact = 1, number;   <br> 
+                            <b>printf</b>("Enter a number: ");    <br>
+                            <b>scanf</b>("%d",&number);  <br>  
+                            <b>for</b>(i = 1; i &lt;= number; i++){    <br>
+                                fact = fact * i; 
+                            }    <br>
+                            <b>printf</b>("Factorial of %d is: %d", number, fact);   <br> 
+                            <b> return</b> 0;
+                            } 
+                            <hr>
+
+                                <p style="color: darkred;">Output:</p>
+                                    <p>Enter a number: 5<br>
+                                    Factorial of 5 is: 120 </p>
+         
+                     </p>
+        
+                     
+                 </div>  <!-- code in C -->
+                 
+                 <div class="col-md-6 codeinJava j3 effect7">
+        
+                    <h3><strong>Factorial program in JAVA :</strong></h3><br>
+                     <p>
+                        <b>class</b>&nbsp;  FactorialExample{  <br>
+                        <b>public static void</b> &nbsp; main(String args[]){ <br> 
+                        <b>int</b> i, fact = 1;   <br>
+                        <b>int</b> number = 5; <span>//It is the number to calculate factorial   </span>  <br><br>
+                        <b>for</b>(i = 1; i &lt;= number; i++){     <br>
+                            fact = fact * i; 
+                        }   <br> 
+                        <b>System.out.println</b>("Factorial of "+number+" is: "+fact);<br>
+                        }   <br>
+                        } 
+                        
+                        <hr>
+
+                                <p style="color: darkred;">Output:</p>
+                                    <p>Factorial of 5 is: 120 </p>
+                        
+                     </p>
+        
+                 </div>  <!-- code in Java -->
+                 </div>
+                </div>
+    </div> 
+
+    <!--  ********************************* fourth question ******************************************  -->
+
+    <div class="fourthQ">
+    
+        <div class="row">
+        
+         <div class="col-md-12 Question effect2"><h1>What is Bubble Sort ?</h1></div> <!-- Question -->
+         
+         <div class="col-md-12 Answer"><h3>Bubble sort is also known as sinking sort. In this algorithm, sorting is done by swapping adjacent element repeatedly if not in order.</h3>
+             <hr>
+            <h3><strong>Bubble Sort algorithm :</strong></h3>
+             
+                 <ul>
+                     <li>Step 1 Start</li>
+                     <li>Step 2 Select starting element</li>
+                     <li>Step 3 If first element is greater than second swap else goto step 4</li>
+                     <li>Step 4 Check with other neighbor element.</li>
+                     <li>Step 5 Repeat the process till no swapping is done.</li>
+                     <li>Step 6 STOP</li>
+                 </ul>
+
+         </div>  <!-- Description -->
+
+         <div class="col-md-12 text-center"><button type="button" class="btn btn-success" role="button" data-toggle="collapse" href=".c4" aria-expanded="false" aria-controls="collapseExample">Code In C</button> &nbsp;&nbsp; 
+            <button type="button" class="btn btn-warning" role="button" data-toggle="collapse" href=".j4" aria-expanded="false" aria-controls="collapseExample">Code In JAVA</button></div>
+         
+            <div class="row codebox">
+         <div class="col-md-6 codeinC c4 effect7">
+            
+             <h3><strong>Bubble Sort in C :</strong></h3><br>
+             <p>
+
+                    <em style="color: darkred">#include&lt;stdio.h&gt;</em>
+                    <br>
+                <b>void</b> bubblesort(<b>int</b> arr[], <b>int</b> size) <br>   
+                {  <br>  
+                <b>int</b> i, j;  <br>  
+                <b>for</b> (i = 0;  i &lt; size; i++)  <br>  
+                {  <br>  
+                <b>for</b> (j = 0; j &lt; size - i; j++)  <br>  
+                {  <br>  
+                <b>if</b> (arr[j] > arr[j+1])  <br>  
+                swap(&amp;arr[j], &amp;arr[j+1]);  <br>  
+      
+                }  <br>  
+                }  <br>  
+                }  <br>  
+                <b>void</b> swap(<b>int</b> *a, <b>int</b> *b) <br>   
+                {  <br>  
+                <b> int</b> temp;  <br>  
+                temp = *a;  <br>  
+                *a = *b;  <br>  
+                *b = temp;  <br>  
+                }  <br>  
+                <b>int</b> main()  <br>  
+                {  <br>  
+   
+                <b>int</b> array[100], i, size;  <br>  
+                <b> printf</b>("How many numbers you want to sort:  ");  <br>  
+                <b>scanf</b>("%d", &amp;size);  <br>  
+                <b>printf</b>("\nEnter %d numbers : ", size);  <br>  
+                <b>for</b> (i = 0; i &lt; size; i++)  <br>  
+                <b>scanf</b>("%d", &amp;array[i]);  <br>  
+                bubblesort(array, size);  <br>  
+                <b> printf</b>("\nSorted array is ");  
+                <br> 
+                <br>
+                 
+               <b>for</b> (i = 0; i &lt; size; i++)  <br>  
+               <b>printf</b>(" %d ", array[i]);  <br>  
+               <b> return</b> 0;  
+   
+}  
+                    <hr>
+
+                        <p style="color: darkred;">Output:</p>
+                            <p>How many numbers you want to sort:  5 <br>                                                                                                               
+                                                                                                                                                     
+                                Enter 5 numbers : 10 56 78 42 15    <br>                                                                                                                   
+                                                                                                                                                                                     
+                                Sorted array is  10  15  42  56  78</p>
+ 
+             </p>
+
+             
+         </div>  <!-- code in C -->
+         
+         <div class="col-md-6 codeinJava j4 effect7">
+
+            <h3><strong>Bubble Sort in JAVA :</strong></h3><br>
+             <p>
+             <b>public class</b> BubbleSortExample {  <br>
+            <b>static void</b> bubbleSort(int[] arr) {  <br>
+            <b>int</b> n = arr.length;  <br>
+            <b>int</b> temp = 0;  <br><br>
+            <b>for</b>(int i = 0; i &lt; n; i++){  <br>
+            <b> for</b>(int j = 1; j &lt; (n-i); j++){  <br><br>
+            <b> if</b>(arr[j-1] > arr[j]) {  <br>
+                                                 <span>//swap elements </span> <br>
+                                                temp = arr[j-1];  <br>
+                                                 arr[j-1] = arr[j];  <br>
+                                                 arr[j] = temp;  <br>
+                                         }  <br>
+                                          
+                                 }  <br>
+                         }  <br>
+                  
+                    }  <br>
+                <b>public static void</b> main(String[] args) {  <br>
+                <b>int</b> arr[] ={3 60 35 2 45 320 5};  <br>
+                                 
+                <b>System.out.println</b>("Array Before Bubble Sort");  <br><br>
+                <b>for</b>(<b>int</b> i = 0; i &lt; arr.length; i++){  <br>
+                <b>System.out.print</b>(arr[i] + " ");  <br>
+                                }  <br>
+                <b>System.out.println</b>();  <br>
+                                  
+                bubbleSort(arr); &nbsp;<span>//sorting array elements using bubble sort  </span><br>
+                                 
+                <b>System.out.println</b>("Array After Bubble Sort");  <br><br>
+                <b>for</b>(<b>int</b> i = 0; i &lt; arr.length; i++){  <br>
+                <b>System.out.print</b>(arr[i] + " ");  <br>
+                                }  <br>
+                   
+                        }  <br>
+                } <br>
+                
+                <hr>
+
+                <p style="color: darkred;">Output:</p>
+                <p>Array Before Bubble Sort<br>
+                    3 60 35 2 45 320 5 <br>
+                    Array After Bubble Sort <br>
+                    2 3 5 35 45 60 320 </p>
+                
+             </p>
+
+         </div>  <!-- code in Java -->
+         </div>
+        </div>
+</div> 
+
+<!--  ******************** fifth question ************************************* -->
+
+<div class="fifthQ">
+    
+    <div class="row">
+    
+     <div class="col-md-12 Question effect2"><h1>How to find Third largest element in an array ?</h1></div> <!-- Question -->
+     
+     <div class="col-md-12 Answer">
+        <h3>We can find third largest in one traversal only</h3>
+        <hr>
+         
+             <ul>
+                 <li>Initialize first = a[0] and second = -INF, third = -INF</li>
+                 <li>Iterate the array and compare each element with first.
+                     <ol>
+                        <li>If a[i] is greater than first then update all first, second and third:<br>
+                            third = second<br>
+                            second = first<br>
+                            first = arr[i]</li>
+                        <li>Else compare arr[i] with second, if its greater than second, then update:<br>
+                            third = second<br>
+                            second = arr[i]</li>
+                        <li>Else compare arr[i] with third, if its greater than third, then update:<br>
+                            third = arr[i]</li>
+                     </ol>
+                 </li>
+                 <li>Return third.</li>
+                 
+             </ul>
+
+     </div>  <!-- Description -->
+
+     <div class="col-md-12 text-center"><button type="button" class="btn btn-success" role="button" data-toggle="collapse" href=".c5" aria-expanded="false" aria-controls="collapseExample">Code In C</button> &nbsp;&nbsp; 
+        <button type="button" class="btn btn-warning" role="button" data-toggle="collapse" href=".j5" aria-expanded="false" aria-controls="collapseExample">Code In JAVA</button></div>
+     
+        <div class="row codebox">
+     <div class="col-md-6 codeinC c5 effect7">
+        
+         <h3><strong>Finding third largest element in C :</strong></h3><br>
+         <p>
+
+                <em style="color: darkred">#include&lt;stdio.h&gt;</em>
+                <br>
+                <b>void</b> thirdLargest(<b>int</b> arr[], <b>int</b> arr_size)<br>
+                {<br>
+                    <span>// There should be atleast three elements</span><br>
+                <b>if</b> (arr_size &lt; 3)<br>
+                    {<br>
+                    <b>printf</b>(" Invalid Input ");<br>
+                <b> return</b>;<br>
+                    }<br>
+                 
+                <span>// Initialize first, second and third Largest element</span><br>
+                <b>int</b> first = arr[0], second = INT_MIN, third = INT_MIN;<br>
+                 
+                <span>// Traverse array elements to find the third Largest</span><br>
+                <b>for</b> (<b>int</b> i = 1; i &lt; arr_size ; i ++)<br>
+                    {<br>
+                    <span> // If current element is greater than first,
+                           then update first, second and third </span><br>
+                        <b>if</b> (arr[i] > first)<br>
+                        {<br>
+                            third  = second;<br>
+                            second = first;<br>
+                            first  = arr[i];<br>
+                        }<br>
+                 
+                    <span>// If arr[i] is in between first and second </span><br>
+                    <b>else if</b> (arr[i] > second)<br>
+                        {<br>
+                            third = second;<br>
+                            second = arr[i];<br>
+                        }<br>
+                 
+                    <span> // If arr[i] is in between second and third</span><br>
+                    <b>else if</b> (arr[i] > third)<br>
+                            third = arr[i];<br>
+                    }<br>
+                 
+                <b> printf</b>("The third Largest element is %d\n", third);<br>
+                }<br>
+                 
+                <b>int</b> main()<br>
+                {<br>
+                <b>int </b>arr[] = {12, 13, 1, 10, 34, 16};<br>
+                <b>int</b> n = sizeof(arr)/sizeof(arr[0]);<br>
+                    thirdLargest(arr, n);<br>
+                <b> return</b> 0;<br>
+                }<br>
+                }  <br>
+                <hr>
+
+                    <p style="color: darkred;">Output:</p>
+                        <p>The third Largest element is 13</p>
+
+         </p>
+
+         
+     </div>  <!-- code in C -->
+     
+     <div class="col-md-6 codeinJava j5 effect7">
+
+        <h3><strong>Finding third largest element in JAVA :</strong></h3><br>
+         <p>
+            <b>import</b> java.util.*;  <br><br>
+            <b>public class</b> ThirdLargestInArrayExample1<br>
+            {  <br>
+            <b> public static int</b> getThirdLargest(<b>int</b>[] a, <b>int</b> total)<br>
+            {  <br>
+            Arrays.sort(a);  <br><br>
+            <b>return</b> a[total-3];  <br>
+            }  <br><br>
+            <b> public static void</b> main(String args[])<br>
+            {  <br>
+            <b>int</b> a[]={1,2,5,6,3,2};  <br><br>
+            <b>int</b> b[]={44,66,99,77,33,22,55};  <br><br>
+            <b>System.out.println</b>("Third Largest: "+getThirdLargest(a,6));  <br><br>
+            <b> System.out.println</b>("Third Largest: "+getThirdLargest(b,7));  <br><br>
+            }<br><br>
+        } 
+            <hr>
+
+            <p style="color: darkred;">Output:</p>
+            <p>Third Largest: 3<br>
+                Third Largest: 66 </p>
+            
+         </p>
+
+     </div>  <!-- code in Java -->
+     </div>
+    </div>
+</div> 
+
+
+
+
+</div>
+
+
+    <script src="JAVASCRIPT/main.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

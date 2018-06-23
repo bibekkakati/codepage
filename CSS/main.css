@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css?family=Bitter');
+@import url('https://fonts.googleapis.com/css?family=Rajdhani');
+
+body{
+    font-family: 'Rajdhani', sans-serif;
+    background-color: #ede8e1;
+}
+ul > li{
+    font-size: 1.5em;
+}
+
+ /* =================================== code para ===========================  */
+
+p{
+    font-family: 'Bitter', serif;
+    font-size: 1.em;
+    font-weight: 400;
+
+}
+
+/*  ========================= syntax =============================== */
+
+b{
+    color: #017c70;
+}
+
+/*  ============================== comment lines ============================ */
+
+span{
+    color: #0c8d01;
+}
+
+/*  ========================== question ============================== */
+
+.Question{
+    width: 90%;
+    left: 5%;
+    right: 5%;
+    background-color:#13909e;
+    text-align: center;
+    color: #ffffff;
+    padding: 5px;
+    margin-top: 10px;
+    border-radius: 30px;
+}
+
+.Question:hover{
+    background-color: #0d9bb5;
+}
+
+/*  ========================== description ==================== */
+
+.Answer{
+    width: 90%;
+    left: 5%;
+    right: 5%;
+    text-align: center;
+    color: #3a3939;
+}
+.Answer>ul{
+    text-align: left;
+}
+
+/*  ============================== code area ============================ */
+.codebox{
+    margin: 0px 10px 0px 10px;
+}
+.codeinC, .codeinJava{
+    background-color: #e8e4e4;
+    margin-bottom: 20px;
+    margin-top: 5px;
+    padding: 20px; 
+    border-left: #d64161 solid 4px;
+    display: none;
+}
+
+/*  ================================== box shadow =========================== */
+
+.effect7, .effect2{
+	-webkit-box-shadow: 0 10px 6px -6px #777;
+	   -moz-box-shadow: 0 10px 6px -6px #777;
+	        box-shadow: 0 10px 6px -6px #777;
+}
+
+/*  === btn ===== */
+
+.btn{
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 768px){
+    body{
+        font-size: 1em;  
+    }
+    h1,h3{
+    font-size: 1.8em;
+    }
+    p{
+        font-size:1.2em;
+    }
+}
